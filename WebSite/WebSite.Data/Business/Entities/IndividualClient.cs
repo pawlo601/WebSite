@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebSite.Data.Business.Entities
 {
-    public class IndividualClient:Customer
+    public class IndividualClient : Customer
     {
         public string Name { get; set; }
         public string Surname { get; set; }

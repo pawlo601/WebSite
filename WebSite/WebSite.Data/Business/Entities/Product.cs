@@ -11,7 +11,7 @@ namespace WebSite.Data.Business.Entities
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
-        public string QuantityPerUnit { get; set; }
+        public float QuantityPerUnit { get; set; }
         public decimal PicePerUnit { get; set; }
     }
 }

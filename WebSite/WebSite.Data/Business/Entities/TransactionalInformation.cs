@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
 
-namespace CodeProject.Business.Entities
+namespace WebSite.Data.Business.Entities
 {
     public class TransactionalInformation
     {

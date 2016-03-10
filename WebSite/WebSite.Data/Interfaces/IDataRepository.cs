@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeProject.Interfaces
+namespace WebSite.Data.Interfaces
 {
     public interface IDataRepository
     {

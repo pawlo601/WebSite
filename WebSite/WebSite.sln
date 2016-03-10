@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.Portal", "WebSite.Portal\WebSite.Portal.csproj", "{79475323-EDA7-4CA2-A987-BF067E4DECD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.Web", "WebSite.Portal\WebSite.Web.csproj", "{79475323-EDA7-4CA2-A987-BF067E4DECD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.Data", "WebSite.Data\WebSite.Data.csproj", "{C4A7086A-27C4-4606-89D8-E700EB9B0171}"
 EndProject

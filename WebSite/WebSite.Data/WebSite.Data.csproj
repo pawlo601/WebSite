@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Common\Utilities.cs" />
+    <Compile Include="Business\Common\ValidationErrors.cs" />
     <Compile Include="Business\Entities\Address.cs" />
     <Compile Include="Business\Entities\Company.cs" />
     <Compile Include="Business\Entities\Customer.cs" />
@@ -62,17 +64,19 @@
     <Compile Include="Business\Entities\Product.cs" />
     <Compile Include="Business\Entities\TransactionalInformation.cs" />
     <Compile Include="Business\Rules\AddressRule.cs" />
-    <Compile Include="Business\Rules\CustomerRule.cs" />
+    <Compile Include="Business\Rules\CompanyRule.cs" />
     <Compile Include="Business\Rules\IndividualClientRule.cs" />
     <Compile Include="Business\Rules\ProductRules.cs" />
-    <Compile Include="Interfaces\ICustomerDateService.cs" />
+    <Compile Include="Business\Services\CustomerBusinessService.cs" />
+    <Compile Include="Business\Services\OrderBusinessService.cs" />
+    <Compile Include="Business\Services\ProductBusinessService.cs" />
+    <Compile Include="Interfaces\ICustomerDataService.cs" />
     <Compile Include="Interfaces\IDataRepository.cs" />
     <Compile Include="Interfaces\IOrderDataService.cs" />
-    <Compile Include="Interfaces\IProductDateService.cs" />
+    <Compile Include="Interfaces\IProductDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Business\Services\" />
     <Folder Include="EntityFramework\" />
   </ItemGroup>
   <ItemGroup>

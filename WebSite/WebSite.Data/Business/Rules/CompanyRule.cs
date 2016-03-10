@@ -3,9 +3,9 @@ using WebSite.Data.Business.Entities;
 
 namespace WebSite.Data.Business.Rules
 {
-    public class CustomerRule: AbstractValidator<Company>
+    public class CompanyRule: AbstractValidator<Company>
     {
-        public CustomerRule()
+        public CompanyRule()
         {
             RuleFor(p=>p.CompanyName).NotEmpty().WithMessage("Company name is required.");
             RuleFor(p=>p.ContactAddress).NotNull().WithMessage("Contact address is required.");

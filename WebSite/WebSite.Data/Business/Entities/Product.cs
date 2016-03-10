@@ -1,7 +1,10 @@
-﻿namespace WebSite.Data.Business.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebSite.Data.Business.Entities
 {
     public class Product
     {
+        [Key]
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }

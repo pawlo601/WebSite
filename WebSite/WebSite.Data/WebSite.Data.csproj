@@ -70,15 +70,19 @@
     <Compile Include="Business\Services\CustomerBusinessService.cs" />
     <Compile Include="Business\Services\OrderBusinessService.cs" />
     <Compile Include="Business\Services\ProductBusinessService.cs" />
+    <Compile Include="EntityFramework\DataServices\CustomerDataService.cs" />
+    <Compile Include="EntityFramework\DataServices\OrderDataService.cs" />
+    <Compile Include="EntityFramework\DataServices\ProductDataService.cs" />
+    <Compile Include="EntityFramework\DynamicQueryable.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkService.cs" />
+    <Compile Include="EntityFramework\WebSiteDatabase.cs" />
     <Compile Include="Interfaces\ICustomerDataService.cs" />
     <Compile Include="Interfaces\IDataRepository.cs" />
     <Compile Include="Interfaces\IOrderDataService.cs" />
     <Compile Include="Interfaces\IProductDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EntityFramework\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

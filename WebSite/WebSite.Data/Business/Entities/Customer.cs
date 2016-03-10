@@ -1,7 +1,10 @@
-﻿namespace WebSite.Data.Business.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebSite.Data.Business.Entities
 {
     public abstract class Customer
     {
+        [Key]
         public int CustomerID { get; set; }
         public string ContactTitle { get; set; }
         public Address ContactAddress { get; set; }

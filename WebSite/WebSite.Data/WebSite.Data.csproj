@@ -66,6 +66,7 @@
     <Compile Include="Business\Rules\IndividualClientRule.cs" />
     <Compile Include="Business\Rules\ProductRules.cs" />
     <Compile Include="Interfaces\ICustomerDateService.cs" />
+    <Compile Include="Interfaces\IDataRepository.cs" />
     <Compile Include="Interfaces\IOrderDataService.cs" />
     <Compile Include="Interfaces\IProductDateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

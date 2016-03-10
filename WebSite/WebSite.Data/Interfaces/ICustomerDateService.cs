@@ -1,13 +1,11 @@
 ﻿using System;
+using CodeProject.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WebSite.Data.Business.Entities;
 
 namespace WebSite.Data.Interfaces
 {
-    public interface ICustomerDateService
+    public interface ICustomerDateService: IDataRepository, IDisposable
     {
         void CreateIndividualClient(IndividualClient client);
         void CreateCompany(Company compay);

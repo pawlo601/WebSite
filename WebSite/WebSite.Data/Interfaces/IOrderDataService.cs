@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using CodeProject.Interfaces;
+using System.Collections.Generic;
 using WebSite.Data.Business.Entities;
 
 namespace WebSite.Data.Interfaces
 {
-    public interface IOrderDataService
+    public interface IOrderDataService: IDataRepository, IDisposable
     {
         void CreateOrder(Order order);
         void UpdateOrder(Order order);

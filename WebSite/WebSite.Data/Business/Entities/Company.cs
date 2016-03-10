@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebSite.Data.Business.Entities
 {
-    public class Company:Customer
+    public class Company : Customer
     {
         public string CompanyName { get; set; }
         public string REGON { get; set; }

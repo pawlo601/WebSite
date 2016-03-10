@@ -60,16 +60,19 @@
     <Compile Include="Business\Entities\Order.cs" />
     <Compile Include="Business\Entities\PositionInTheOrder.cs" />
     <Compile Include="Business\Entities\Product.cs" />
+    <Compile Include="Business\Entities\TransactionalInformation.cs" />
     <Compile Include="Business\Rules\AddressRule.cs" />
     <Compile Include="Business\Rules\CustomerRule.cs" />
     <Compile Include="Business\Rules\IndividualClientRule.cs" />
     <Compile Include="Business\Rules\ProductRules.cs" />
+    <Compile Include="Interfaces\ICustomerDateService.cs" />
+    <Compile Include="Interfaces\IOrderDataService.cs" />
+    <Compile Include="Interfaces\IProductDateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\Services\" />
     <Folder Include="EntityFramework\" />
-    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

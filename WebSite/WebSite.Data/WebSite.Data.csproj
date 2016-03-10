@@ -49,11 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Entities\Address.cs" />
+    <Compile Include="Business\Entities\Company.cs" />
+    <Compile Include="Business\Entities\Customer.cs" />
+    <Compile Include="Business\Entities\IndividualClient.cs" />
+    <Compile Include="Business\Entities\Order.cs" />
+    <Compile Include="Business\Entities\PositionInTheOrder.cs" />
+    <Compile Include="Business\Entities\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\Common\" />
-    <Folder Include="Business\Entities\" />
     <Folder Include="Business\Rules\" />
     <Folder Include="Business\Services\" />
     <Folder Include="EntityFramework\" />

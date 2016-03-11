@@ -10,7 +10,7 @@ namespace WebSite.Data.EntityFramework
 {
     public class WebSiteDatabase : DbContext
     {
-        public WebSiteDatabase() : base("SchoolDBConnectionString") { }
+        public WebSiteDatabase() : base("WebSizeDataBaseConnectionString") { }
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }

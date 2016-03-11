@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4A7086A-27C4-4606-89D8-E700EB9B0171}</ProjectGuid>
+    <ProjectGuid>{7DF0E5D0-3AC0-4389-8E53-736B66CA8225}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebSite.Data</RootNamespace>
-    <AssemblyName>WebSite.Data</AssemblyName>
+    <RootNamespace>WebSite.Tests</RootNamespace>
+    <AssemblyName>WebSite.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,12 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,33 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Common\Utilities.cs" />
-    <Compile Include="Business\Common\ValidationErrors.cs" />
-    <Compile Include="Business\Entities\Address.cs" />
-    <Compile Include="Business\Entities\Company.cs" />
-    <Compile Include="Business\Entities\Customer.cs" />
-    <Compile Include="Business\Entities\IndividualClient.cs" />
-    <Compile Include="Business\Entities\Order.cs" />
-    <Compile Include="Business\Entities\PositionInTheOrder.cs" />
-    <Compile Include="Business\Entities\Product.cs" />
-    <Compile Include="Business\Entities\TransactionalInformation.cs" />
-    <Compile Include="Business\Rules\AddressRule.cs" />
-    <Compile Include="Business\Rules\CompanyRule.cs" />
-    <Compile Include="Business\Rules\IndividualClientRule.cs" />
-    <Compile Include="Business\Rules\ProductRules.cs" />
-    <Compile Include="Business\Services\CustomerBusinessService.cs" />
-    <Compile Include="Business\Services\OrderBusinessService.cs" />
-    <Compile Include="Business\Services\ProductBusinessService.cs" />
-    <Compile Include="Interfaces\ICustomerDataService.cs" />
-    <Compile Include="Interfaces\IDataRepository.cs" />
-    <Compile Include="Interfaces\IOrderDataService.cs" />
-    <Compile Include="Interfaces\IProductDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <ProjectReference Include="..\WebSite.Data\WebSite.Data.csproj">
+      <Project>{c4a7086a-27c4-4606-89d8-e700eb9b0171}</Project>
+      <Name>WebSite.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.EntityFramework\WebSite.EntityFramework.csproj">
+      <Project>{15855836-bc0f-4ced-9d11-93b741bf90fa}</Project>
+      <Name>WebSite.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.Portal\WebSite.Web.csproj">
+      <Project>{79475323-eda7-4ca2-a987-bf067e4decd2}</Project>
+      <Name>WebSite.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

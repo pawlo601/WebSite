@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebSite.Data.Business.Entities;
 using WebSite.Data.Interfaces;
+using System.Linq.Dynamic;
 
 namespace WebSite.Data.EntityFramework.DataServices
 {
@@ -12,27 +13,31 @@ namespace WebSite.Data.EntityFramework.DataServices
     {
         public void CreateProduct(Product product)
         {
-            throw new NotImplementedException();
+            dbConnection.Products.Add(product);
         }
 
         public void DeleteProduct(Product product)
         {
-            throw new NotImplementedException();
+            dbConnection.Products.Remove(product);
         }
 
         public Product GetProduct(int productID)
         {
-            throw new NotImplementedException();
+            return dbConnection.Products.Where(p => p.ProductID == productID).FirstOrDefault();
         }
 
         public IList<Product> GetProducts(int currentPageNumber, int pageSize, string sortExpression, string sortDirection, string filter, out int totalRows)
         {
-            throw new NotImplementedException();
+            totalRows = 0;
+            sortExpression = sortExpression + " " + sortDirection;
+            totalRows = dbConnection.Products.Count();
+            List<Product> customers = dbConnection.Products.OrderBy(sortExpression).Skip((currentPageNumber - 1) * pageSize).Take(pageSize).ToList();
+            return customers;
         }
 
         public void UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

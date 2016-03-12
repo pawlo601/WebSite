@@ -18,32 +18,33 @@ namespace WebSite.Data.EntityFramework
 
         public void BeginTransaction()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void CloseSession()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void CommitTransaction(bool closeSession)
         {
-            throw new NotImplementedException();
+            dbConnection.SaveChanges();
         }
 
         public void CreateSession()
         {
-            throw new NotImplementedException();
+            _connection = new WebSiteDatabase();
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            if (_connection != null)
+                _connection.Dispose();
         }
 
         public void RollbackTransaction(bool closeSession)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

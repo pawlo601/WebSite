@@ -5,59 +5,64 @@ using System.Text;
 using System.Threading.Tasks;
 using WebSite.Data.Business.Entities;
 using WebSite.Data.Interfaces;
+using System.Linq.Dynamic;
 
 namespace WebSite.Data.EntityFramework.DataServices
 {
     public class CustomerDataService : EntityFrameworkService, ICustomerDataService
     {
-        public void CreateCompany(Company compay)
+        public void CreateCompany(Company company)
         {
-            throw new NotImplementedException();
+            dbConnection.Customers.Add(company);
         }
 
         public void CreateIndividualClient(IndividualClient client)
         {
-            throw new NotImplementedException();
+            dbConnection.Customers.Add(client);
         }
 
-        public void DeleteCompany(Company compay)
+        public void DeleteCompany(Company company)
         {
-            throw new NotImplementedException();
+            dbConnection.Customers.Remove(company);
         }
 
         public void DeleteIndividualClient(IndividualClient client)
         {
-            throw new NotImplementedException();
+            dbConnection.Customers.Remove(client);
         }
 
         public IList<Company> GetCompanies(int currentPageNumber, int pageSize, string sortExpression, string sortDirection, string filter, out int totalRows)
         {
-            throw new NotImplementedException();
+            List<Company> list = new List<Company>();
+            totalRows = 0;
+            return list;
         }
 
         public Company GetCompany(int compayid)
         {
-            throw new NotImplementedException();
+            return (Company)dbConnection.Customers.Where(p => p.CustomerID == compayid).FirstOrDefault();
         }
 
         public IndividualClient GetIndividualClient(int clientid)
         {
-            throw new NotImplementedException();
+            return (IndividualClient)dbConnection.Customers.Where(p => p.CustomerID == clientid).FirstOrDefault();
         }
 
         public IList<IndividualClient> GetIndividualClients(int currentPageNumber, int pageSize, string sortExpression, string sortDirection, string filter, out int totalRows)
         {
-            throw new NotImplementedException();
+            List<IndividualClient> list = new List<IndividualClient>();
+            totalRows = 0;
+            return list;
         }
 
         public void UpdateCompany(Company compay)
         {
-            throw new NotImplementedException();
+
         }
 
         public void UpdateIndividualClient(IndividualClient client)
         {
-            throw new NotImplementedException();
+
         }
     }
 }

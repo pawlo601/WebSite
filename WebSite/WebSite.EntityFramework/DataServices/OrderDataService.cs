@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebSite.Data.Business.Entities;
 using WebSite.Data.Interfaces;
+using System.Linq.Dynamic;
 
 namespace WebSite.Data.EntityFramework.DataServices
 {
@@ -12,27 +13,31 @@ namespace WebSite.Data.EntityFramework.DataServices
     {
         public void CreateOrder(Order order)
         {
-            throw new NotImplementedException();
+            dbConnection.Orders.Add(order);
         }
 
         public void DeleteOrder(Order order)
         {
-            throw new NotImplementedException();
+            dbConnection.Orders.Remove(order);
         }
 
         public Order GetOrder(int orderid)
         {
-            throw new NotImplementedException();
+            return dbConnection.Orders.Where(p=>p.OrderID==orderid).FirstOrDefault();
         }
 
         public IList<Order> GetOrders(int currentPageNumber, int pageSize, string sortExpression, string sortDirection, string filter, out int totalRows)
         {
-            throw new NotImplementedException();
+            totalRows = 0;
+            sortExpression = sortExpression + " " + sortDirection;
+            totalRows = dbConnection.Orders.Count();
+            List<Order> customers = dbConnection.Orders.OrderBy(sortExpression).Skip((currentPageNumber - 1) * pageSize).Take(pageSize).ToList();
+            return customers;
         }
 
         public void UpdateOrder(Order order)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

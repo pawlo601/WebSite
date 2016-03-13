@@ -1,7 +1,10 @@
-﻿namespace WebSite.Data.Business.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebSite.Data.Business.Entities
 {
     public class PositionInTheOrder
     {
+        [Key]
         public int ProductID { get; set; }
         public int CustomerID { get; set; }
         public decimal Quantity { get; set; }

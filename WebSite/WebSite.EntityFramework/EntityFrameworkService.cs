@@ -7,7 +7,7 @@ using WebSite.Data.Interfaces;
 
 namespace WebSite.Data.EntityFramework
 {
-    public abstract class EntityFrameworkService : IDataRepository, IDisposable
+    public class EntityFrameworkService : IDataRepository, IDisposable
     {
         WebSiteDatabase _connection;
 

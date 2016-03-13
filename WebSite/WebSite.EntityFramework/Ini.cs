@@ -8,7 +8,7 @@ using WebSite.Data.EntityFramework;
 
 namespace WebSite.EntityFramework
 {
-    class Ini : System.Data.Entity.DropCreateDatabaseIfModelChanges<WebSiteDatabase>
+    public class Ini : System.Data.Entity.DropCreateDatabaseAlways<WebSiteDatabase>
     {
         protected override void Seed(WebSiteDatabase context)
         {

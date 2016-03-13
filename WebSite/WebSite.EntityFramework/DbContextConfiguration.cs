@@ -13,7 +13,8 @@ namespace WebSite.EntityFramework
     {
         public DbContextConfiguration()
         {
-            //SetDatabaseInitializer(new DropCreateDatabaseAlways<WebSiteDatabase>());// drop all table
+            SetDatabaseInitializer(new Ini());//drop table and add start values
+            //SetDatabaseInitializer(new DropCreateDatabaseAlways<WebSiteDatabase>());// drop all table adn information
             SetProviderServices(SqlProviderServices.ProviderInvariantName, SqlProviderServices.Instance);
         }
     }
